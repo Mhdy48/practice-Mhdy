@@ -161,10 +161,6 @@ section.hero {
 .hero__search {
   position: relative;
   width: 100%;
-  transition: .5s;
-}
-.hero__search:hover{
-  transform: scale(1.02);
 }
 /* Search Input */
 .hero__input {
@@ -176,6 +172,10 @@ section.hero {
   font-size: 1.1rem;
   box-shadow: 0 0 20px var(--shadow-color);
   font-family: Chillax-Medium, sans-serif;
+  transition: .5s;
+}
+.hero__input:focus{
+  transform: scale(1.02);
 }
 /* Search Button */
 .hero__button {
