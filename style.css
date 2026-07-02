@@ -8,10 +8,13 @@
 
   --header-footer-background-color: #000000;
 
-  --button-outline-background: rgba(33, 32, 32, 0.9);
+  --button-outline-background: #fcfbfb1c;
+  --button-hover-outline-background: #21212100;
   --button-primary-background: #4c5fd5;
+  --button-hover-primary-background: #1b2c9d;
 
   --shadow-color: #cac5c5;
+  --shadow-text-color: #9d98bc;
 }
 /* ==========================
    Reset
@@ -89,6 +92,7 @@ nav.header__actions .btn {
   padding: 0.2rem 0.8rem;
   border-radius: 0.3rem;
   font-size: .8rem;
+  transition: .5s;
 }
 /* Outline Button */
 nav.header__actions .btn--outline {
@@ -98,6 +102,13 @@ nav.header__actions .btn--outline {
 /* Primary Button */
 nav.header__actions .btn--primary {
   background-color: var(--button-primary-background);
+}
+/* Hover Button */
+nav.header__actions .btn--outline:hover {
+  background-color: var(--button-hover-outline-background);
+}
+nav.header__actions .btn--primary:hover{
+  background-color: var(--button-hover-primary-background);
 }
 /* ==========================
    Responsive
@@ -120,5 +131,75 @@ nav.header__actions .btn--primary {
   div.header__brand {
     position: relative;
     right: 0.6rem;
+  }
+}
+/* ==========================
+   Hero Section
+========================== */
+section.hero {
+  background-color: var(--hero-background);
+  padding: 5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+/* Hero Content */
+section.hero .hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+/* Hero Title */
+section.hero .hero__title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-shadow: 3px 5px 2px var(--shadow-text-color);
+}
+/* Search Form */
+section.hero .hero__content .hero__search {
+  position: relative;
+  width: 100%;
+}
+/* Search Input */
+section.hero .hero__content .hero__search .hero__input {
+  width: 100%;
+  padding: 0.6rem 4rem 0.6rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.1rem;
+  box-shadow: 0 0 20px var(--shadow-color);
+  font-family: Chillax-Medium, sans-serif;
+}
+/* Search Button */
+section.hero .hero__content .hero__search .hero__button {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+/* ==========================
+   Responsive
+========================== */
+/* Tablet */
+@media screen and (max-width: 768px) {
+  section.hero .hero__title {
+    font-size: 3rem;
+  }
+}
+/* Large Mobile */
+@media screen and (max-width: 480px) {
+  section.hero .hero__title {
+    font-size: 2.5rem;
+  }
+}
+/* Small Mobile */
+@media screen and (max-width: 430px) {
+  section.hero .hero__title {
+    font-size: 1.8rem;
   }
 }
