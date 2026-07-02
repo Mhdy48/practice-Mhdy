@@ -1,0 +1,124 @@
+:root {
+  /* ===== Color Variables ===== */
+  --page-background: #ffffff;
+  --hero-background: #dadbf1;
+
+  --text-color: #ffffff;
+  --text-on-dark: #000;
+
+  --header-footer-background-color: #000000;
+
+  --button-outline-background: rgba(33, 32, 32, 0.9);
+  --button-primary-background: #4c5fd5;
+
+  --shadow-color: #cac5c5;
+}
+/* ==========================
+   Reset
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 100;
+}
+/* ==========================
+   Base Styles
+========================== */
+body {
+  font-family: Chillax-Medium, sans-serif;
+}
+/* ==========================
+   Header
+========================== */
+header.header {
+  background-color: var(--header-footer-background-color);
+  align-items: center;
+  width: 100%;
+  padding: 0 4.5rem;
+}
+/* Header Container */
+div.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Global Header Links */
+div.container a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+/* ==========================
+   Brand Section
+========================== */
+div.header__brand {
+  display: flex;
+  align-items: center;
+}
+/* Logo */
+div.header__brand a.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Logo Title */
+div.header__brand .header__logo-title {
+  font-size: 1rem;
+  font-weight: 900;
+  margin-left: -0.3rem;
+}
+/* Logo Image */
+div.header__brand .header__logo img {
+  width: 3rem;
+  height: 3rem;
+}
+/* Divider */
+div.header__brand span.header__separator {
+  margin: 0 0.5rem;
+  color: var(--text-color);
+}
+/* ==========================
+   Header Actions
+========================== */
+nav.header__actions{
+  display: flex;
+  gap: .5rem;
+}
+/* Shared Button Styles */
+nav.header__actions .btn {
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.3rem;
+  font-size: .8rem;
+}
+/* Outline Button */
+nav.header__actions .btn--outline {
+  background-color: var(--button-outline-background);
+  box-shadow: 0 0 4px var(--shadow-color);
+}
+/* Primary Button */
+nav.header__actions .btn--primary {
+  background-color: var(--button-primary-background);
+}
+/* ==========================
+   Responsive
+========================== */
+/* Tablet */
+@media screen and (max-width: 768px) {
+  header.header {
+    padding: 0 2rem;
+  }
+}
+/* Mobile */
+@media screen and (max-width: 570px) {
+  header.header {
+    padding: 2rem;
+  }
+  div.container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  div.header__brand {
+    position: relative;
+    right: 0.6rem;
+  }
+}
